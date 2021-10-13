@@ -1,0 +1,5 @@
+streamlit==0.86.0
+pandas==1.2.4
+matplotlib==3.3.4
+tensorflow==2.5.0
+tensorflow_privacy==0.6.0

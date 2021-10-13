@@ -1,0 +1,10 @@
+syft==0.2.9
+torch
+numpy
+jupyter
+jupyterlab
+matplotlib
+pandas
+UUID
+sklearn
+openmined_psi
