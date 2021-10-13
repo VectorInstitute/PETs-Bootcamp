@@ -1,4 +1,4 @@
-# Privacy Enhancing Techniques (PETs)
+# Privacy Enhancing Technologies (PETs)
 
 This repository contains demos and reference implementations for a variety of PETs that will be highlighted at Vector Institute's upcoming PETs Bootcamp in November 2021. Each subdirectory considers one representative example of PET, dataset, and use case.
 
