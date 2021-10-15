@@ -4,7 +4,7 @@ This repository contains demos and reference implementations for a variety of PE
 
 ## History
 
-- *October 13, 2021* Demos/notebooks have been added to the repo. Plain Python codebases will be made available later this month. 
+- *October 13, 2021* - Demos/notebooks have been added to the repo. Plain Python codebases will be made available later this month. 
 
 ## Accessing Data
 
