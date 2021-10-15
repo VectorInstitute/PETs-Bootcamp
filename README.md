@@ -17,3 +17,14 @@ Please write to [sedef.kocak@vectorinstitute.ai](mailto:sedef.kocak@vectorinstit
 ## Writing Code
 
 Please do not commit any code directly to the main branch. After cloning the repo, please create a branch for your project / prototype. Please note that any code you push to the repo will be visible by all other bootcamp participants. If you prefer not to contribute code to the bootcamp repo, please download the code and work outside of the repo. 
+
+## Acknowledgements
+
+Thanks to Vector Institute Applied ML Staff and Interns for their contributions to this work.
+- [Sara El-Shawa](https://github.com/saraelshawa)
+- [Sophie Tian](https://github.com/SophieTian)
+- Ryan Marten
+- [Sobhan Hemati](https://github.com/sobhanhmt)
+- [John Jewell](https://github.com/jewelltaylor)
+- [Shems Saleh](https://github.com/ShemsSaleh)
+- [Ethan Jackson](https://github.com/ethancjackson)
