@@ -19,7 +19,7 @@ This demo gives an overview of Membership Inference Attacks (MIA) on Machine Lea
 
 
 ## Data
-This Notebook employs CIFAR-10 dataset.
+This notebook employs CIFAR-10 dataset.
 
 ## Dependencies
 This demo relies primarily on [TensorFlow Privacy](https://github.com/tensorflow/privacy). In the event of any issues following the installation instructions below, please refer to the corresponding package documentation for more details.
