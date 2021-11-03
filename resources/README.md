@@ -12,6 +12,7 @@ A collection of helpful links.
 
 ### PATE
 - https://blog.openmined.org/build-pate-differential-privacy-in-pytorch/
+- http://www.cleverhans.io/privacy/2018/04/29/privacy-and-machine-learning.html
 
 ## Homomorphic Encryption
 
