@@ -1,3 +1,7 @@
+# Additional Resources
+
+A collection of helpful links.
+
 ## Differential Privacy
 
 ### DP-SGD
@@ -23,6 +27,12 @@
 ### TensorFlow Federated
 - https://www.tensorflow.org/federated
 
+### PyVertical
+- https://blog.openmined.org/what-is-pyvertical/
+
+### Federated Learning Types
+- https://blog.openmined.org/federated-learning-types/
+
 ## Privacy Preserving Record Linkage
 
 ### Private Fuzzy Matching
@@ -31,12 +41,12 @@
 ### Private Set Intersection
 - https://en.wikipedia.org/wiki/Private_set_intersection
 
-### Text Deidentification
+## Text Deidentification
 - https://med.stanford.edu/researchit/news/clinical-text-deid-tide-pipeline-now-opensource.html
 - https://www.private-ai.com/
 - https://github.com/BCHSI/philter-ucsf
 
-### Reidentification Risk Reduction
+## Reidentification Risk Reduction
 
 - https://en.wikipedia.org/wiki/K-anonymity
 - https://en.wikipedia.org/wiki/Differential_privacy
@@ -50,9 +60,9 @@
 ### Model Inversion
 - https://blog.openmined.org/extracting-private-data-from-a-neural-network/
 
-### Other Tutorials
+## Other Tutorials
 
-## Language Model Fine Tuning
+### Language Model Fine Tuning
 - https://www.tensorflow.org/text/tutorials/classify_text_with_bert
 
 ## Datasets
