@@ -9,7 +9,9 @@ This repository contains demos and reference implementations for a variety of PE
 
 ## Accessing Data
 
-Until all datasets can be published publicly, we are providing the following link for downloading datasets:
+During the bootcamp, all datasets (except MIMIC-III) are available at ```/ssd003/projects/pets/datasets/```
+
+For external use, we are providing the following link for downloading datasets:
 
 - [OneDrive Link](https://vectorinstituteai-my.sharepoint.com/:f:/r/personal/sedef_kocak_vectorinstituteai_onmicrosoft_com/Documents/PETS_Project_Participants/Example%20Datasets?csf=1&web=1&e=NsH4vE)
 
