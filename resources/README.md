@@ -26,6 +26,9 @@ A collection of helpful links.
 ### Google Fully Homomorphic Encryption (FHE)
 - https://github.com/google/fully-homomorphic-encryption
 
+### Intel Homomorphic Encryption Toolkit
+- https://www.intel.com/content/www/us/en/developer/tools/homomorphic-encryption/overview.html#gs.fggdmm
+
 ## Federated Learning
 
 ### TensorFlow Federated
