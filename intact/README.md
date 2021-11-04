@@ -21,3 +21,11 @@ Rebalancing the target variable did not lead to models improve our state-of-the-
 
 Next, we need to make a choice on which variables to partition. We decided to select MOSTYPE and MOSHOOFD (See definition here: https://www.kaggle.com/uciml/caravan-insurance-challenge) as the variables to be partitioned on the client side. MOSTYPE and MOSHOOFD are categorical variables with 40 and 5 unique values respectively with information on the customers. The choice to partition these two variables was based on several factors. First, specific values of these variables appeared as important in a study on feature selection (https://medium.com/swlh/feature-selection-to-kaggle-caravan-insurance-challenge-on-r-bede801d3a66). Second, in an experiment where we explicitly removed those two variables, the F1 score dropped to 5%, a significant reduction from the performance that included both variables. Thirdly, these two variables are the result of a thorough customer survey, e.g. containing information on income, living standards, religion, values, career. It is plausible that this type of information is not easily acquired by an insurance provider, but requires a third party vendor that specializes in surveys.
 
+
+## Day 2
+
+Today, we decided to move more variables to the external vendor side than planned on day 1. All variables that contained demographic information were moved to the external vendor side. The remaining variables with product ownership and insurance statistics were kept on the so-called Intact side. We created a feature engineering pipeline that partitions the variables, as well as addition steps such as one-hot encoding the categorical features, feature scaling, and generating unique identifiers for every observation.
+
+In addition, we shifted focus to building a vertical federated learning (VFL) model for the caravan insurance problem. The model is a split-neural network consisting of two separate neural networks (NNs): one NN built on the vendor data, followed by 1 NN built on the Intact data, augmented with a hidden representation of the vendor-side features.
+
+Preliminary results of the split-NN model show that, as we train more epochs, the model degrades into predicting solely the majority class, rather than learning something less trivial. This may be caused by the target class imbalance.
