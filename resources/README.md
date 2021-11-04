@@ -23,6 +23,9 @@ A collection of helpful links.
 ### CKKS Encryption Scheme
 - https://www.youtube.com/watch?v=iQlgeL64vfo
 
+### Google Fully Homomorphic Encryption (FHE)
+- https://github.com/google/fully-homomorphic-encryption
+
 ## Federated Learning
 
 ### TensorFlow Federated
