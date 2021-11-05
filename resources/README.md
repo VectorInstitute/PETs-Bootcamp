@@ -83,6 +83,9 @@ A collection of helpful links.
 
 ## Datasets
 
+### Inside Airbnb (Locations, Reviews, Ratings, etc. With Toronto Data Available)
+- http://insideairbnb.com/get-the-data.html
+
 ### Yelp Reviews
 - https://www.yelp.com/dataset/documentation/main
 
