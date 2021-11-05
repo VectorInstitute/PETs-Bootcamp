@@ -43,6 +43,9 @@ A collection of helpful links.
 ### Vertical Federated Learning Without Revealing Intersection Membership
 - https://arxiv.org/pdf/2106.05508.pdf
 
+### Federated Learning Powered By NVIDIA Clara
+- https://developer.nvidia.com/blog/federated-learning-clara/
+
 ## Privacy Preserving Record Linkage
 
 ### Private Fuzzy Matching
