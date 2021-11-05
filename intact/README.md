@@ -15,7 +15,7 @@ The distribution of the target is heavily skewed. 94% of the target label are 0.
 
 The predictive performance (F1 score) of a random guess model that guesses 0 or 1 following the prior probability of the labels in the data is situated around 7%. Any model with an F1 score below the random guess model is a failure.
 
-We explored several neural network (NN) architectures, using scikit-learn's multi-layer perceptron (MLP) wrapper. We converged towards an MLP with 5 hidden layers, each with 40 hidden units. This model resulted in an F1 score of 12% on the unseen test set. We are working towards a Pytorch implementation of this MLP that reproduces the scikit-learn MLP.
+We explored several neural network (NN) architectures, using scikit-learn's multi-layer perceptron (MLP) wrapper. We are working towards a Pytorch implementation of this MLP that reproduces the scikit-learn MLP.
 
 Rebalancing the target variable did not lead to models improve our state-of-the-art performance. E.g., we tried oversampling the minority class using SMOTE-Tomek links resulting in an uniformly distributed target distribution, but to no avail.
 
@@ -29,3 +29,8 @@ Today, we decided to move more variables to the external vendor side than planne
 In addition, we shifted focus to building a vertical federated learning (VFL) model for the caravan insurance problem. The model is a split-neural network consisting of two separate neural networks (NNs): one NN built on the vendor data, followed by 1 NN built on the Intact data, augmented with a hidden representation of the vendor-side features.
 
 Preliminary results of the split-NN model show that, as we train more epochs, the model degrades into predicting solely the majority class, rather than learning something less trivial. This may be caused by the target class imbalance.
+
+## Day 3
+
+Today, we finalized building the baseline model and split-NN model. We ended up finding a split-NN model with predictive performance close to the baseline model. 
+We learned more about the intrinsics of the split-NN, pysift, PSI, and other missing pieces required to productionize VFL. Finally, we put together a deck summarizing the 3-day bootcamp. We agreed to present our findings on 2021-12-01 10:00 am in a joint meeting with the other bootcamp participants.
