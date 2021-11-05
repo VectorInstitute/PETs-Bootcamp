@@ -80,35 +80,35 @@ A collection of helpful links.
 ### MIMIC-III
 
 #### Longitudinal Feature Extraction
-https://psb.stanford.edu/psb-online/proceedings/psb18/beaulieu-jones.pdf
+- https://psb.stanford.edu/psb-online/proceedings/psb18/beaulieu-jones.pdf
 
 #### Benchmark Dataset Extraction
-https://github.com/YerevaNN/mimic3-benchmarks
+- https://github.com/YerevaNN/mimic3-benchmarks
 
 #### Official Build MIMIC
-https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iii/buildmimic
+- https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iii/buildmimic
 
 ### Credit Card Fraud Detection
-https://www.kaggle.com/mlg-ulb/creditcardfraud
+- https://www.kaggle.com/mlg-ulb/creditcardfraud
 
 ### IEEE-CIS Fraud Detection
-https://www.kaggle.com/c/ieee-fraud-detection/data
+- https://www.kaggle.com/c/ieee-fraud-detection/data
 
 ### Home Credit Default Risk
-https://www.kaggle.com/c/home-credit-default-risk/data
+- https://www.kaggle.com/c/home-credit-default-risk/data
 
 ### LEAF Benchmark Datasets
-https://leaf.cmu.edu/
-https://leaf.cmu.edu/build/html/index.html
+- https://leaf.cmu.edu/
+- https://leaf.cmu.edu/build/html/index.html
 
 ### Caravan Insurance Challenge
-https://www.kaggle.com/uciml/caravan-insurance-challenge
+- https://www.kaggle.com/uciml/caravan-insurance-challenge
 
 ### KITTI Vision Benchmark
-http://www.cvlibs.net/datasets/kitti/
+- http://www.cvlibs.net/datasets/kitti/
 
 ### LostAndFound
-http://www.6d-vision.com/lostandfounddataset
+- http://www.6d-vision.com/lostandfounddataset
 
 ### Kidney Histopathology Data
 - https://github.com/VectorInstitute/PETs-Bootcamp/blob/main/HFL_Kidney_Histopathology/HFL_WSI_part1.ipynb
