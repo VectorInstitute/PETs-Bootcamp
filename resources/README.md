@@ -46,6 +46,9 @@ A collection of helpful links.
 ### Federated Learning Powered By NVIDIA Clara
 - https://developer.nvidia.com/blog/federated-learning-clara/
 
+### NeruIPS 2021 - New Frontiers in Federated Learning
+- https://nips.cc/Conferences/2021/Schedule?showEvent=21829
+
 ## Privacy Preserving Record Linkage
 
 ### Private Fuzzy Matching
