@@ -40,6 +40,9 @@ A collection of helpful links.
 ### Federated Learning Types
 - https://blog.openmined.org/federated-learning-types/
 
+### Vertical Federated Learning Without Revealing Intersection Membership
+- https://arxiv.org/pdf/2106.05508.pdf
+
 ## Privacy Preserving Record Linkage
 
 ### Private Fuzzy Matching
