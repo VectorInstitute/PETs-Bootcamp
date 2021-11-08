@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd ~
 source /ssd003/projects/aieng/public/mimic_preprocessing/bin/activate
 #Download dataset, extract relevant files, delete excess and unzip files mkdir mimic3
 #Replace USERNAME with PhysioNet username
