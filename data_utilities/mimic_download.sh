@@ -1,9 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=get_mimic #SBATCH -q nopreemption
-#SBATCH -c 4
-#SBATCH -p cpu
-#SBATCH --mem-per-cpu=8G
-#SBATCH --output=get_mimic-%j.out #SBATCH --error=get_mimic-%j.err
+
 source /ssd003/projects/aieng/public/mimic_preprocessing/bin/activate
 #Download dataset, extract relevant files, delete excess and unzip files mkdir mimic3
 #Replace USERNAME with PhysioNet username
