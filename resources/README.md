@@ -62,6 +62,11 @@ A collection of helpful links.
 - https://www.private-ai.com/
 - https://github.com/BCHSI/philter-ucsf
 
+## Video Deidentification
+
+### The OR Black Box (with Vector Faculty Member Frank Rudzicz)
+- https://youtu.be/wA200ifReWg?t=2992
+
 ## Reidentification Risk Reduction
 
 - https://en.wikipedia.org/wiki/K-anonymity
