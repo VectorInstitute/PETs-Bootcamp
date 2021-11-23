@@ -9,6 +9,7 @@ A collection of helpful links.
 - https://www.tensorflow.org/responsible_ai/privacy/tutorials/classification_privacy
 - https://www.tensorflow.org/responsible_ai/privacy/guide
 - https://github.com/pytorch/opacus
+- https://github.com/gkaissis/deepee
 
 ### PATE
 - https://blog.openmined.org/build-pate-differential-privacy-in-pytorch/
