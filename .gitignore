@@ -1,0 +1,7 @@
+__pycache__
+*.pyc
+*.log
+*.csv
+*.parquet
+*.ipynb
+checkpoint
