@@ -50,6 +50,9 @@ A collection of helpful links.
 ### NeruIPS 2021 - New Frontiers in Federated Learning
 - https://nips.cc/Conferences/2021/Schedule?showEvent=21829
 
+### CanDIG (Distributed Infrastructure for Genomics)
+- https://www.sciencedirect.com/science/article/pii/S2666979X21000409?via%3Dihub
+
 ## Privacy Preserving Record Linkage
 
 ### Private Fuzzy Matching
