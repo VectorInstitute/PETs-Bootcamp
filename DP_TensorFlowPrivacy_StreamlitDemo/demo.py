@@ -163,9 +163,9 @@ Now let's try training a Vanilla SGD model and a DP-SGD model.
 Select some hyperparemter values and see how the vanilla SGD and DP-SGD models compare:
 """
 
-left_column, right_column = st.beta_columns(2)
+left_column, right_column = st.columns(2)
 with left_column:
-    lr = st.slider("learning rate", min_value=0.01, max_value=0.2)
+    lr = st.slider("learning rate", min_value=0.001, max_value=0.1, step=0.001, format='%.3f')
 
 with right_column:
     epochs = st.slider("epochs", min_value=10, max_value=100, step=1)
@@ -176,7 +176,7 @@ st.write("")
 """
 For DP-SGD, some additional hyperparemeters are required:
 """
-left_column_2, right_column_2 = st.beta_columns(2)
+left_column_2, right_column_2 = st.columns(2)
 with left_column_2:
     l2_norm_clip = st.slider("L2 norm clip", min_value=0.8, max_value=1.2, step=0.005)
 
@@ -430,11 +430,11 @@ if st.button("train the models"):
     diffs_flattened = np.concatenate([x.ravel() for x in diffs])
     # normalize each element in the flattened list by dividing by the overall sum of model weights
     diffs_flattened_normalized = diffs_flattened / overall_sum_model_weights
-    normalized_mean_diff_vainlla = np.mean(diffs_flattened_normalized)
+    normalized_mean_diff_vanilla = np.mean(diffs_flattened_normalized)
 
     st.write(
         "The weights of the models trained with vanilla SGD changed by: ",
-        normalized_mean_diff_vainlla,
+        normalized_mean_diff_vanilla,
         ", on average",
     )
     st.write(
@@ -442,16 +442,32 @@ if st.button("train the models"):
         normalized_mean_diff_dpsgd,
         ", on average",
     )
-    st.write(
-        "DP-SGD made the adversarial example less detectable by a magnitude of ",
-        normalized_mean_diff_vainlla / normalized_mean_diff_dpsgd,
-    )
-    """
-    DP-SGD reduces the influence of each individual data points. When we train a model without a particular data point, \
-    DP-SGD makes the model parameters change less than vanilla SGD. As a result, the adversarial has a harder time determining whether \
-    this person is in the database, and their privacy is better protected.
-    """
 
+    if normalized_mean_diff_dpsgd < normalized_mean_diff_vanilla:
+        st.write(
+            "DP-SGD made the adversarial example less detectable."
+        )
+        st.write(
+                """
+    DP-SGD reduces the influence of individual data points on trained model parameters. When we train a model without a particular data point, \
+    DP-SGD makes the model parameters change less than vanilla SGD (assuming a well-optimized vanilla model). As a result, the adversary has a harder time determining whether \
+    this person is in the training set, and their privacy is better preserved.
+    """
+            )
+    else:
+        st.write(
+            "DP-SGD failed to make the adversarial example less detectable."
+        )
+
+        st.write(
+            """
+            While DP-SGD may reduce model parameter sensitivity to training examples, it is not guaranteed to result in lower sensitivity than vanilla SGD.
+            Try changing your training hyperparameters such that your vanilla model is improved. You will likely see find that with vanilla SGD, model improvements 
+            will come at the expense of greater sensitivity to individual training examples. 
+            """
+
+            )
+    
 
 st.header("Summary")
 
