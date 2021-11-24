@@ -17,3 +17,12 @@ In order to run demo locally, we recommend that you create a new virtual environ
 
 ## Running on Vector Cluster
 During the bootcamp, conda environments will be preloaded with dependencies for multiple PETs.
+
+## Creating a virtual env on vector cluster
+Recommended to use the python virtual env, as conda not accessible. Using the same kernel as the default notebooks:
+```bash
+/pkgs/python-38/bin/python3.8 -m venv .pyenv
+source .pyenv/bin/activate
+pip install -r requirements.txt
+```
+pip install -r requirements.txt
