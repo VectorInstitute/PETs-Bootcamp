@@ -83,9 +83,9 @@ def train_step(dataloader, splitNN):
     for item in dataloader:
         x=[]
         for i in range(len(item)):
-            if i==0:
+            if i==(len(item)-1):
                 target = item[i][1].float()
-                target = target.send(splitNN.models[-1].location)
+                target = target.send(splitNN.models[i].location)
             x.append(item[i][0].send(splitNN.models[i].location))
 
         #1) Zero our grads
@@ -126,9 +126,9 @@ def val_step(dataloader, splitNN):
     for item in dataloader:
         x=[]
         for i in range(len(item)):
-            if i==0:
+            if i==(len(item)-1):
                 target = item[i][1].float()
-                target = target.send(splitNN.models[-1].location)
+                target = target.send(splitNN.models[i].location)
             x.append(item[i][0].send(splitNN.models[i].location))
 
         # Make a prediction
