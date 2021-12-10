@@ -33,7 +33,7 @@ issues following the installation instructions below, please refer to the
 corresponding package documentation for more details.
 
 ### Setting up virtual environment, and installing dependencies
-The notebook has been tested on `python = 3.9.9`. We use
+The notebook has been tested on `python = 3.8.0`. We use
 [poetry](https://python-poetry.org/) to install dependencies for running the
 notebook.
 
