@@ -14,6 +14,8 @@ This demo gives an overview of Membership Inference Attacks (MIA) on Machine Lea
 
 *   Defending the Membership Inference Attacks Using Differential Privacy in Tensorflow Privacy
 
+*   Defending the Membership Inference Attacks Using Sharness Aware Minimiztion scheme
+
 * References
 
 
