@@ -31,5 +31,12 @@ In order to run demo on colab, all you need is to install the most recent verson
 
 !pip install -U git+https://github.com/tensorflow/privacy
 
+## Running Locally
+In order to run demo locally, we recommend that you create a new virtual environment using venv or conda. In local testing on Windows 10, we used the following steps: 
+- ```conda create -n MIA python=3.7.11```
+- ```conda activate MIA```
+- ```pip install -r requirements.txt```
+
+
 ## Running on Vector Cluster
 During the bootcamp, conda environments will be preloaded with dependencies for multiple PETs.
