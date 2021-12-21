@@ -12,15 +12,16 @@ covered in the notebook are as follows:
 
 ### Outline Notebook:
 
-* Membership Inference Attacks (MIA) on Machine Learning Models
+* Membership Inference Attacks (MIA) on Machine Learning models
   * Definition
   * Types of Membership Inference Attacks
-  * Membership Inference Attack Methods
-  * Defences Against Membership Inference Attacks
-
-* Membership Inference Attack in Tensorflow Privacy
-* Defending the Membership Inference Attacks Using Differential Privacy in
+  * Membership Inference Attack methods
+  * Defences against Membership Inference Attacks
+* Membership Inference Attacks in Tensorflow Privacy
+* Defending Membership Inference Attacks using Differential Privacy in
 Tensorflow Privacy
+* Defending Membership Inference Attacks using Sharness Aware
+Minimization scheme
 * References
 
 ### Data
