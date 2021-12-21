@@ -11,7 +11,6 @@ This demo contains a notebook
 covered in the notebook are as follows:
 
 ### Outline Notebook:
-
 * Membership Inference Attacks (MIA) on Machine Learning models
   * Definition
   * Types of Membership Inference Attacks
