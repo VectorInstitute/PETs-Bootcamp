@@ -1,3 +1,5 @@
 .ipynb_checkpoints
 venv
 .python-version
+*.pyc
+__pycache__

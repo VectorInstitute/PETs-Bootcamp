@@ -1,19 +1,38 @@
 ## Vertical Federated Learning with PyTorch and PySyft
 
-This demo gives an overview of Vertical Federated Learning with [PySyft](https://github.com/OpenMined/PySyft), a python library that extends [PyTorch](https://pytorch.org/docs/stable/index.html) to support various PETS. The vast majority of the code is contained within the [demo.ipynb](demo.ipynb) notebook. 
+This demo gives an overview of Vertical Federated Learning with
+[PySyft](https://github.com/OpenMined/PySyft), a python library that extends
+[PyTorch](https://pytorch.org/docs/stable/index.html) to support various PETs.
+The vast majority of the code is contained within the
+[demo.ipynb](demo.ipynb) notebook. 
 
-## Data
-The data in this demo is sourced from the the [Home Credit Default Dataset](https://www.kaggle.com/c/home-credit-default-risk/overview). For the purpose of this demo, we need to vertically parition the data into two datasets: The Home Credit Dataset and The Credit Buruea Dataset. In order to do this, first download and place the application_train.csv file in the root of the VFL Demo directory. Proceed to run the vfl_data_processing.ipynb notebook to generate the two datasets with files named home_credit_train.csv and credit_bureau_train.csv. These will be used subsequently in the demo.ipynb notebook.
+### Data
+The data in this demo is sourced from the
+[Home Credit Default Dataset](https://www.kaggle.com/c/home-credit-default-risk/overview).
+For the purpose of this demo, we need to vertically parition the data into two
+datasets: The Home Credit Dataset and The Credit Buruea Dataset. In order to do
+this, first download and place the `application_train.csv` file in the root of
+the VFL Demo directory. Proceed to run the `vfl_data_processing.ipynb` notebook
+to generate the two datasets with files named `home_credit_train.csv` and
+`credit_bureau_train.csv`. These will be used subsequently in the `demo.ipynb`
+notebook.
 
-## Dependencies
-This demo relies primarily on [PyTorch](https://pytorch.org/docs/stable/index.html) and [PySyft](https://github.com/OpenMined/PySyft). In the event of any issues following the installation instructions below, please refer to the corresponding package documentation for more details.
+### Dependencies
+This demo relies primarily on
+[PyTorch](https://pytorch.org/docs/stable/index.html) and
+[PySyft](https://github.com/OpenMined/PySyft). In the event of any issues
+following the installation instructions below, please refer to the corresponding
+package documentation for more details.
 
-## Running Locally
-In order to run demo locally, we recommend that you create a new virtual environment using venv or conda. In local testing on MacOS 11.6, we used the following steps: 
-- ```conda create -n vfl_bootcamp python=3.6.9```
-- ```conda activate vfl_bootcamp```
-- ```pip install -r requirements.txt```
-- ```jupyter lab```
+### Setting up virtual environment, and installing dependencies
+The notebooks have been tested on `python = 3.6.9`. We use
+[poetry](https://python-poetry.org/) to install dependencies for running the
+notebook.
 
-## Running on Vector Cluster
-During the bootcamp, conda environments will be preloaded with dependencies for multiple PETs.
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install poetry
+poetry install
+```

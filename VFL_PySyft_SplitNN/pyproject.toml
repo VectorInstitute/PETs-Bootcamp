@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "vfl"
+version = "0.1.0"
+description = "Vertical Federated Learning with PyTorch and PySyft"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "3.6.9"
+syft = "0.2.9"
+matplotlib = "3.3.1"
+jupyter = "^1.0.0"
+torch = "1.4.0"
+sklearn = "^0.0"
+pandas = "1.1.1"
+numpy = "1.18.1"
+tornado = "4.5.3"
+"openmined.psi" = "^0.3.5"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
