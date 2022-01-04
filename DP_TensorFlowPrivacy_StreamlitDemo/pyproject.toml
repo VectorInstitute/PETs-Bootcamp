@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "dp_tensorflowprivacy_streamlitdemo"
+version = "0.1.0"
+description = "Streamlit demo on TensorFlowPrivacy using code from the DP-SGD implementation on the heart disease dataset"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "3.8.0"
+streamlit = "0.86.0"
+pandas = "1.2.4"
+matplotlib = "3.3.4"
+tensorflow = "2.5.0"
+tensorflow-privacy = "0.6.0"
+sklearn = "^0.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
