@@ -18,6 +18,6 @@ poetry install
 
 ### How to run
 
-- ```bash
+```bash
 python3 -m streamlit run demo.py
 ```
