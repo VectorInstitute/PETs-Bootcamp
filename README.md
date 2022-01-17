@@ -31,3 +31,5 @@ Thanks to Vector Institute Applied ML Staff and Interns for their contributions 
 - [John Jewell](https://github.com/jewelltaylor)
 - [Shems Saleh](https://github.com/ShemsSaleh)
 - [Ethan Jackson](https://github.com/ethancjackson)
+- [Amrit Krishnan](https://github.com/amrit110)
+- [Gerald Shen](https://github.com/GeraldCSC)
