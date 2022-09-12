@@ -2,7 +2,6 @@ import torch
 from torch import nn
 from torch.nn.utils import clip_grad_norm_
 
-lr = 0.001
 noise_multiplier = 1.1
 max_grad_norm = 1.0
 
@@ -24,7 +23,7 @@ class HCModel(torch.nn.Module):
         super(HCModel, self).__init__()
         self.fused_input_dim = hc_dim + cb_dim
         self.layers = nn.Sequential(
-            nn.Linear(self.fused_input_dim, 32),
+            nn.Linear(self.fused_input_dim, 32, bias=False),
             nn.ReLU(),
             nn.Linear(32, 16),
             nn.ReLU(),
@@ -106,13 +105,14 @@ class SplitNN:
         Updates the parameters of all networks in SplitNN
     """
 
-    def __init__(self, hc_model, cb_model, hc_opt, cb_opt):
-        self.hc_model = hc_model
-        self.cb_model = cb_model
+    def __init__(self, hc_model, cb_model, hc_opt, cb_opt, device='cpu'):
+        self.hc_model = hc_model.to(device)
+        self.cb_model = cb_model.to(device)
         self.hc_opt = hc_opt
         self.cb_opt = cb_opt
         self.data = []
         self.remote_tensors = []
+        self.device = device
 
     def forward(self, hc_x, cb_x):
         """
@@ -175,32 +175,19 @@ class SplitNN:
         Parameters
         ----------
         """
-        # self.cb_opt.step()
-        # self.hc_opt.step()
-        for param in self.cb_model.parameters():
-          per_sample_grad = param.grad.detach().clone()
-          clip_grad_norm_(per_sample_grad, max_norm=max_grad_norm)
-          param.accumulated_grads.append(per_sample_grad)
-        # Aggregate back
-        for param in self.cb_model.parameters():
-            param.grad = torch.stack(param.accumulated_grads, dim=0)
+        # update params for hc_model
+        self.hc_opt.step()
+        # Adding noise
+        state_hc = self.hc_model.state_dict()
+        for name, param in self.hc_model.named_parameters():
+            # state_hc[name] = state_hc[name] - self.hc_opt.param_groups[0]['lr'] * param.grad
+            state_hc[name] += torch.normal(0, 0.001, size=param.shape).to(self.device)
+        self.hc_model.load_state_dict(state_hc)
 
-        # Now we are ready to update and add noise!
-        for param in self.cb_model.parameters():
-            param = param - lr * param.grad
-            param += torch.normal(mean=0, std=noise_multiplier * max_grad_norm)
-
-        # self.hc_opt.step()
-        for param in self.hc_model.parameters():
-          per_sample_grad = param.grad.detach().clone()
-          clip_grad_norm_(per_sample_grad, max_norm=max_grad_norm)
-          param.accumulated_grads.append(per_sample_grad)
-
-        # Aggregate back
-        for param in self.hc_model.parameters():
-            param.grad = torch.stack(param.accumulated_grads, dim=0)
-
-        # Now we are ready to update and add noise!
-        for param in self.hc_model.parameters():
-            param = param - lr * param.grad
-            param += torch.normal(mean=0, std=noise_multiplier * max_grad_norm)
+        # update params for cb_model
+        self.cb_opt.step()
+        state_cb = self.cb_model.state_dict()
+        for name, param in self.cb_model.named_parameters():
+            # state_cb[name] = state_cb[name] - self.cb_opt.param_groups[0]['lr'] * param.grad
+            state_cb[name] += torch.normal(0, 0.001, size=param.shape).to(self.device)
+        self.cb_model.load_state_dict(state_cb)
